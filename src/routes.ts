@@ -9,6 +9,7 @@ export const publicRoutes = [
   "/readme",
   "/article",
   "/video",
+  "/video/[id]",
   "/community",
   "/awrag",
   "/atom/playground",
