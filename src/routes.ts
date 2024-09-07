@@ -8,6 +8,7 @@ export const publicRoutes = [
   "/verification",
   "/readme",
   "/article",
+  "/article/[id]",
   "/video",
   "/video/[id]",
   "/community",
