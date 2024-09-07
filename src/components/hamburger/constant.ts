@@ -10,6 +10,11 @@ const hamburger = [
     path: "/join",
     icon: "iconamoon:profile-light",
   },
+  {
+    title: "الأوراق",
+    path: "/awarg",
+    icon: "system-uicons:paper",
+  },
 
   {
     title: "المنصة",
