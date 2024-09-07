@@ -12,7 +12,7 @@ const hamburger = [
   },
   {
     title: "الأوراق",
-    path: "/awarg",
+    path: "/awrag",
     icon: "system-uicons:paper",
   },
 
