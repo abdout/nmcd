@@ -23,7 +23,7 @@ const Editor: React.FC<EditorProps> = ({ value, onChange }) => {
     }),],
     editorProps: {
       attributes: {
-        class: "border border-gray-300 w-full h-80 p-4  outline-none rounded-none hover:border-gray-300",
+        class: "border border-gray-300 w-full h-[30rem] md:h-80 p-4  outline-none rounded-none hover:border-gray-300",
       },
     },
     content: value,

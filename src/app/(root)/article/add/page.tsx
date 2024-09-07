@@ -86,9 +86,9 @@ const Create = () => {
             <Form  {...form}>
                 <form
                     onSubmit={form.handleSubmit(handleSubmit)}
-                    className={`${step === 1 ? 'w-screen px-72 pt-20' : 'w-screen px-32 pt-10 items-top justify-center '}`}
+                    className={`${step === 1 ? 'w-screen md:px-72 md:pt-20 pt-40' : 'w-screen md:px-32 pt-10 items-top justify-center '}`}
                 >
-                    <div className="flex items-center gap-2 absolute top-4 right-[4.3rem]">
+                    <div className="flex items-center gap-2 absolute top-4 md:right-[4.3rem]">
                         <Link href="/article">
                             <Button size='icon' variant='outline' className="rounded-full">
                                 <Icon icon='ic:twotone-close' width={25} />
