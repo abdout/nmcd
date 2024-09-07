@@ -14,6 +14,7 @@ export const publicRoutes = [
   "/awrag",
   "/atom/playground",
   "/api/article",
+  "/api/video",
   "/auth/puplic",
 ];
 
