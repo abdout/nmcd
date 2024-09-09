@@ -4,19 +4,27 @@
  * @type {string[]}
  */
 export const publicRoutes = [
- "/",
+  "/",
   "/verification",
   "/readme",
   "/article",
-  "/article/[id]",
   "/video",
-  "/video/[id]",
   "/community",
   "/awrag",
   "/atom/playground",
   "/api/article",
   "/api/youtube",
   "/auth/puplic",
+];
+
+/**
+ * An array of regular expressions for public routes with dynamic segments
+ * @type {RegExp[]}
+ */
+export const publicRoutesRegex = [
+  /^\/article\/[^/]+$/,
+  /^\/video\/[^/]+$/,
+  /^\/api\/youtube\/[^/]+$/,
 ];
 
 /**

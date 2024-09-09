@@ -13,7 +13,7 @@ const RecentArticles: React.FC = () => {
   }, [recentArticles]);
 
   return (
-    <div className='space-y-10'>
+    <div className='space-y-8 md:space-y-10'>
       <Title icon="material-symbols-light:article-outline" placeholder="المقالات الجديدة" />
       {articles.map((article) => {
         // Get the date object
@@ -38,7 +38,7 @@ const RecentArticles: React.FC = () => {
                   alt={article.title}
                   width={180}
                   height={150}
-                  className="object-cover object-center max-w-full block h-28 w-24 md:w-44 md:h-36"
+                  className="object-cover object-center max-w-full block h-32 w-24 md:w-44 md:h-36"
                 />
                 <div className="flex flex-col space-y-1">
                   <strong className="md:text-xl block truncate md:whitespace-normal md:overflow-visible md:w-auto w-48 whitespace-nowrap overflow-ellipsis">
@@ -46,7 +46,11 @@ const RecentArticles: React.FC = () => {
                   </strong>
 
 
-                  <p className='text-sm md:text-lg font-light w-[13rem] md:w-[28rem]'>{article.desc}</p>
+                  <p className='text-[16px] md:text-lg font-light w-[13rem] md:w-[28rem] overflow-hidden text-ellipsis 
+              whitespace-normal -webkit-box -webkit-line-clamp-3 -webkit-box-orient-vertical limit'>
+                    {article.desc}
+                  </p>
+
                   <div className="flex gap-2 md:gap-4 ">
                     <p className='text-[12px] md:[16px] font-light'>
                       {article.author}
@@ -65,3 +69,5 @@ const RecentArticles: React.FC = () => {
 };
 
 export default RecentArticles;
+
+
