@@ -11,7 +11,7 @@ const contribute = () => {
       <div className='justify-start'>
         <Title title='Contributors! 👋' description='Welcome'/>
         <div className='flex flex-col space-y-2 pt-6'>
-          <p>Thank you for considering contributing to NMBD! We greatly appreciate your interest and support.<br /> Below are some essential resources and information to help you <strong>get started</strong>:</p>
+          <p>Thank you for considering contributing to NMBD! Great appreciate to your interest and support.<br /> Below are some essential resources and information to help you <strong>get started</strong>:</p>
 
           <Section
             title='Paradigm 🏷️'
@@ -43,6 +43,12 @@ const contribute = () => {
             link='/github'
             label='Link to Github Manual'
           />
+           <Section
+            title='Pattern 🚊'
+            body='Tackle problems systematically using standardized patterns. This guide introduces you to a structured approach where you follow consistent steps for every problem, ensuring efficient and reliable solutions.'
+            link='/pattern'
+            label='Link to Pattern Manual'
+          />
           <Section
             title='Milestone 🎯'
             body='Explore milestones to understand short-term goals and objectives. This section outlines key targets we aim to achieve in the near future.'
@@ -62,7 +68,7 @@ const contribute = () => {
           <Block />
 
           <h4 className='pt-3'>Get in Touch 📬</h4>
-          <p>Have questions, feedback, or need assistance? feel free to <Link className='text-blue-700' href="https://github.com/abdout/databayt/issues">open an issue</Link> or reach out on <Link className='text-blue-700' href="">Discord</Link> . </p>
+          <p>Have a suggestion, idea, question, feedback, or need assistance? feel free to <Link className='text-blue-700' href="https://github.com/abdout/databayt/issues">open an issue</Link> or reach out on <Link className='text-blue-700' href="">Discord</Link> . </p>
           <Section
             title='Code of Conduct 🤝'
             body='We maintain a code of conduct to ensure a welcoming and inclusive environment for all contributors. Please familiarize yourself with the code of conduct and adhere to its principles when interacting with the community.'
