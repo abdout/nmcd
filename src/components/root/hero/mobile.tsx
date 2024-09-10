@@ -10,10 +10,10 @@ const MobileHero = () => {
         <div className="h-screen relative ">
             <div className="h-screen pr-6 overflow-hidden ">
                 <div
-                    className="flex flex-col justify-center space-y-4 h-full -mt-10"
+                    className="flex flex-col justify-center space-y-2 h-full -mt-14"
                 >
                     <p className="text-lg md:text-xl ">المجتمع أولاً</p>
-                    <h1 className="text-xl font-extrabold tracking-wide -mt-2 whitespace-nowrap">
+                    <h1 className="text-xl font-extrabold tracking-wide  pb-3 whitespace-nowrap">
                         الحركة الوطنية للبناء والتنمية
                     </h1>
 
@@ -23,7 +23,7 @@ const MobileHero = () => {
                         عامة، وتجربة الأمة المسلمة والأحرار في العالم،
                     </p>
                     <Link href="/register">
-                        <Button size='lg' className="bg-yellow-400 text-black w-32 h-10 md:w-44 md:h-12 text-[16px] md:text-lg hover:bg-[#ffd000]">يدك معانا</Button>
+                        <Button size='lg' className="bg-yellow-400 text-black w-32 h-12 md:w-44 md:h-12 text-[16px] md:text-lg hover:bg-[#ffd000]">يدك معانا</Button>
                     </Link>
                 </div>
             </div>
