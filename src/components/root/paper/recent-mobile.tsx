@@ -34,10 +34,10 @@ const MobileRecent = () => {
                                                 className="object-cover object-center w-full block h-44"
                                             />
                                             <CardContent className="absolute inset-0 flex items-center justify-center">
-                                                <div className="text-center leading-8 font-black  backdrop-blur-xl py-2 w-full mt-4">
+                                                <div className="text-center leading-8 font-black  backdrop-blur-xl py-2 w-2/3 md:w-full mt-4">
                                                     {/* Split the title and render each word on a new line */}
                                                     {paper.title.split(" ").map((word, wordIndex) => (
-                                                        <h4 key={wordIndex} className="font-black">{word}</h4>
+                                                        <h4 key={wordIndex} className="font-black text-2xl">{word}</h4>
                                                     ))}
                                                 </div>
                                             </CardContent>

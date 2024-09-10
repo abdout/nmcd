@@ -96,8 +96,8 @@ const RecentVideos = () => {
                     height={350}
                     className="object-cover max-w-full block"
                   />
-                  
-                  <strong className="md:text-lg md:leading-7 mt-2 block truncate md:whitespace-normal md:overflow-visible md:w-auto w-56 whitespace-nowrap overflow-ellipsis">
+
+                  <strong className="md:text-lg md:leading-7 mt-2 block w-56 truncate">
                     {formatTitle(titleWithoutAuthor)}
                   </strong>
 
