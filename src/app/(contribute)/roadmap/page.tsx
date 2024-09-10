@@ -146,6 +146,11 @@ const roadmapItems = [
     description: 'Allow users to tag content',
     githubIssue: 'https://github.com/your-repo/issues/15'
   },
+  {
+    title: '',
+    description: 'Allow users to tag content',
+    githubIssue: 'https://github.com/your-repo/issues/15'
+  },
 ];
 
 const Roadmap = () => {
