@@ -9,13 +9,13 @@ const contribute = () => {
   return (
     <div className='flex flex-col justify-center items-center py-8 '>
       <div className='justify-start'>
-        <Title title='Contributors! 👋' description='Welcome'/>
+        <Title title='Contributors! 👋' description='Welcome' />
         <div className='flex flex-col space-y-2 pt-6'>
           <p>Thank you for considering contributing to NMBD! Great appreciate to your interest and support.<br /> Below are some essential resources and information to help you <strong>get started</strong>:</p>
 
           <Section
             title='Paradigm 🏷️'
-            body='The core principles and conceptual framework that guide our project. This section outlines NMBD, values, and the overarching vision that shapes NMBD.'
+            body='The core principles and conceptual framework that guide NMBD.'
             link='/tech-paradigm'
             label='Link to Paradigm'
           />
@@ -32,6 +32,12 @@ const contribute = () => {
             label='Link to Repository '
           />
           <Section
+            title='Figma 🖌️'
+            body='Design repository for the project, containing wireframes, prototypes, and visual design assets.'
+            link='https://www.figma.com/file/your-file-id/your-file-name'
+            label='Link to Figma'
+          />
+          <Section
             title='Localhost 💻'
             body='A manual to set up a local development environment on your computer. This includes installing the necessary dependencies and configuring the necessary environment variables.'
             link='/localhost'
@@ -43,7 +49,7 @@ const contribute = () => {
             link='/github'
             label='Link to Github Manual'
           />
-           <Section
+          <Section
             title='Pattern 🚊'
             body='Tackle problems systematically using standardized patterns. This guide introduces you to a structured approach where you follow consistent steps for every problem, ensuring efficient and reliable solutions.'
             link='/pattern'

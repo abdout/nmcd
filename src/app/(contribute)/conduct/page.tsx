@@ -3,7 +3,7 @@ import React from 'react'
 const Conduct = () => {
   return (
     <div>
-        <h1>Conduct</h1>
+        <h1>Code of Conduct</h1>
     </div>
   )
 }
