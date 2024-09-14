@@ -7,7 +7,7 @@ const Club = () => {
   return (
     <div>
       <h2>الامانات</h2>
-      <p className='font-light'>اختر مكان واحترق حيث انتهيت</p>
+      <p className='font-light'>سلطان العشق في الله ارضيك وين</p>
       <div className="grid grid-cols-5 gap-8 pt-8">
         {club.map((club, index) => (
           <div key={index}>

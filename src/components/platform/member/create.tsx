@@ -21,7 +21,6 @@ import { Progress } from "@/components/ui/progress";
 import Link from "next/link";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
 
 interface FormData {
     terms: boolean;
@@ -60,7 +59,6 @@ const formSchema = z.object({
 });
 
 const Create: React.FC = () => {
-    // const { data: session, status } = useSession();
     const { refreshMembers } = useMember();
     const { image } = useUpload();
     const [step, setStep] = useState(1);
@@ -100,7 +98,7 @@ const Create: React.FC = () => {
     });
 
     const countries = [
-        { name: 'السودان', cities: ['الخرطوم', 'أم درمان', 'بحري', 'بورتسودان'] },
+        { name: 'السودان', cities: ['الخرطوم', 'أم درمان', 'بحري'] },
         { name: 'السعودية', cities: ['الرياض', 'جدة', 'الدمام'] },
         { name: 'قطر', cities: ['الدوحة', 'الخور', 'الريان'] },
         { name: 'الإمارات ', cities: ['أبوظبي', 'دبي', 'الشارقة'] }
@@ -129,46 +127,28 @@ const Create: React.FC = () => {
     const router = useRouter();
 
     const handleSubmit = async (data: FormData) => {
-        // if (!session?.user?.id) {
-        //     console.error("User is not authenticated");
-        //     return;
-        // }
-
-        // const userId = session.user.id; // Get userId from session
-        // console.log("Form submitted", data);
+        console.log("Form submitted", data);
 
         const response = await fetch('/api/member', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ 
-                ...data,
-                 image,
-                //  userId 
-                }),
+            body: JSON.stringify({ ...data, image: image }),
         });
         console.log(response);
 
         if (response.ok) {
             form.reset();
             refreshMembers();
-            router.push('/platform');
+            router.push('/home');
+            
         }
     };
 
-    // if (status === "loading") {
-    //     return <div>Loading...</div>; // Show a loading indicator while session is being fetched
-    // }
-
-    // if (!session) {
-    //     router.push('/login'); // Redirect to login page if not authenticated
-    //     return null;
-    // }
-
     return (
         <div className="flex flex-col items-center justify-center h-screen registration-page">
-            <div className='felx pl-[35rem] pb-4 flex-col items-start justify-start gap-2 mt-8'>
+            <div className='felx pl-[35rem] pb-4 flex-col items-start justify-start gap-2 mt-4'>
                 <h1>حبابك عشرة</h1>
                 <p className='text-xl font-light'>سيكون لنا متسع من الموت للنوم</p>
             </div>
@@ -405,7 +385,7 @@ const Create: React.FC = () => {
                     )}
                     <Button
                         type="submit"
-                        className="font-medium text-lg absolute bottom-[44px] left-1/2 transform -translate-x-1/2 text-yellow-400 bg-transparent hover:bg-transparent z-50 px-28">
+                        className="font-medium text-lg absolute bottom-[44px] left-1/2 transform -translate-x-1/2 text-green-700 bg-transparent hover:bg-transparent z-50 px-28">
                         طلب العضوية
                     </Button>
                     <Progress value={progress} className="absolute bottom-10 left-1/2 transform -translate-x-1/2 h-12 w-80"

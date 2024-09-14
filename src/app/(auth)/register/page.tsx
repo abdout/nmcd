@@ -2,7 +2,7 @@
 import React from 'react';
 import { MemberProvider } from '@/components/platform/member/context';
 import { UploadProvider } from '@/components/upload/context';
-import Create from '@/components/platform/member/art';
+import Create from '@/components/platform/member/create';
 import { ArticleProvider } from '@/components/root/article/context';
 
 const Register = () => {
