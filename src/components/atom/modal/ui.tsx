@@ -1,9 +1,9 @@
 "use client";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { useModal } from "./context";
 import React from "react";
 import { Icon } from "@iconify/react";
-import { ThemeProvider } from "../theme/provider";
+import { ThemeProvider } from "@/components/theme/provider";
 import { useTheme } from "next-themes";
 
 interface Props {
