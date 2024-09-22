@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import Title from '../atom/title/databayt'
+import Title from '@/components/atom/title/databayt'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Icon } from "@iconify/react";
