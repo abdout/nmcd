@@ -32,7 +32,7 @@ import { Input } from '@/components/ui/input'
 import { DataTableFacetedFilter } from '@/components/data-table/data-table-faceted-filter'
 import { useFilter } from '../platform/member/useFilter'
 import { MixerHorizontalIcon } from "@radix-ui/react-icons"
-import { Modal } from '../atom/dailog'
+import { ShadcnDailog } from '../atom/dailog'
 import Create from '../root/article/create'
 import MemberChart from '../platform/member/chart'
 
@@ -146,9 +146,9 @@ export function DataTable<TData, TValue>({
               })}
           </DropdownMenuContent>
         </DropdownMenu>
-        <Modal triggerText="" triggerIcon="mdi:analytics" >
+        <ShadcnDailog triggerText="" triggerIcon="mdi:analytics" >
         <MemberChart onClose={handleClose} />
-        </Modal> 
+        </ShadcnDailog> 
       </div>
 
       {/* Table */}
