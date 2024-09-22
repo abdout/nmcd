@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import Welcome from '@/components/raksha/ui'
+import Welcome from '@/components/root/community/raksha/ui'
 
 const Alkhwarizmi = () => {
     const alkhwarizmi = {
