@@ -17,7 +17,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { useMember } from "../platform/member/context";
+import { useMember } from "@/components/platform/member/context";
 
 
 const chartConfig = {

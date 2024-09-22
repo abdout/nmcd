@@ -3,7 +3,7 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
-import { useMember } from '../platform/member/context';
+import { useMember } from '@/components/platform/member/context';
 
 
 Chart.register(...registerables);
