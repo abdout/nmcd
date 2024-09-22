@@ -4,7 +4,7 @@ const projectSchema = new Schema(
   {
     title: String,
     desc: String,
-    lead: String,
+    club: String,
     status: String,
     readme: String,
     roadmap: String,

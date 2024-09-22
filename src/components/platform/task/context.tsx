@@ -1,5 +1,6 @@
 "use client";
-import { task, TaskContextProps } from './type';
+
+import {  TaskContextProps, task } from './type';
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 const TaskContext = createContext<TaskContextProps | undefined>(undefined);
@@ -53,7 +54,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return;
     }
   
-    setTask(data.task);
+    setTask (data.task);
     console.log('Updated task state:', task);
   }, []);
 
@@ -61,7 +62,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       const res = await fetch(`/api/task`);
       const data = await res.json();
-      setTasks(data.tasks);
+      setTasks (data.tasks);
     } catch (error) {
       console.error('Failed to fetch tasks:', error);
     }
@@ -83,7 +84,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const refreshTasks = async () => {
-    await fetchTasks();
+    await fetchTasks ();
   };
 
   useEffect(() => {
@@ -108,10 +109,6 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
       console.error('Failed to update task:', error);
     }
   };
-
-  useEffect(() => {
-    fetchTasks();
-  }, []);
 
   return (
     <TaskContext.Provider value={{ task, tasks, fetchTask, fetchTasks, refreshTasks, deleteTask, updateTask, createTask }}>

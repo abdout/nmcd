@@ -7,7 +7,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
-import Title from "@/components/atom/title";
+import Title from "@/components/atom/title/title";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 export const DesktopRecent = () => {

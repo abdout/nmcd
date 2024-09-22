@@ -1,4 +1,4 @@
-import Title from '@/components/atom/title'
+import Title from '@/components/atom/title/title'
 import React from 'react'
 import { Icon } from "@iconify/react";
 

@@ -8,7 +8,6 @@ const contactSchema = new Schema({
 
 const memberSchema = new Schema(
   {
-    userId: { type: String, required: true }, // Link to User.id
     name: String,
     dob: String,
     address: String,

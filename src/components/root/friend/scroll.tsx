@@ -1,4 +1,4 @@
-import Title from "@/components/atom/title";
+import Title from "@/components/atom/title/title";
 import Card from "@/components/root/friend/card";
 import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";

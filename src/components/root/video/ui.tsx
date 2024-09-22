@@ -1,7 +1,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link';
-import Title from '@/components/atom/title';
+import Title from '@/components/atom/title/title';
 import { media } from './constant';
 
 

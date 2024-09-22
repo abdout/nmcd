@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from "react";
-import Title from "@/components/atom/title";
+import Title from "@/components/atom/title/title";
 import Countdown from "./timer";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Icon } from "@iconify/react/dist/iconify.js";

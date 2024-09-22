@@ -6,7 +6,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import Title from "@/components/atom/title";
+import Title from "@/components/atom/title/title";
 import Link from "next/link";
 import { pictures } from "./constant";
 

@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { Button } from "@/components/ui/button";
 import Countdown from "./timer";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import Title from "@/components/atom/title";
+import Title from "@/components/atom/title/title";
 
 
 enum Feeling {

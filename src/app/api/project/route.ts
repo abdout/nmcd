@@ -4,10 +4,10 @@ import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
 
 export async function POST(request: NextRequest) {
-  const { title, desc, lead, status, readme, roadmap, task, contributor, material, chat } = await request.json() as { title: string, desc: string, lead: string, status: string, readme: string, roadmap: string, task: string, contributor: string, material: string, chat: string };
-  console.log({ title, desc, lead, status, readme, roadmap, task, contributor, material, chat });
+  const { title, desc, club, status, readme, roadmap, task, contributor, material, chat } = await request.json() as { title: string, desc: string, club: string, status: string, readme: string, roadmap: string, task: string, contributor: string, material: string, chat: string };
+  console.log({ title, desc, club, status, readme, roadmap, task, contributor, material, chat });
   await connectDB();
-  await Project.create({ title, desc, lead, status, readme, roadmap, task, contributor, material, chat });
+  await Project.create({ title, desc, club, status, readme, roadmap, task, contributor, material, chat });
   return NextResponse.json({ message: "Project Created" }, { status: 201 });
 }
 

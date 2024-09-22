@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { Icon } from "@iconify/react";
-import StaticMap from '@/components/map/try';
+import StaticMap from '@/components/atom/map/try';
 import Link from 'next/link';
 
 const MobileOffice = () => {

@@ -4,14 +4,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Editor from '@/components/editor/ui';
+import Editor from '@/components/atom/editor/ui';
 import ImageUpload from '@/components/upload/image';
 import { usePaper } from "./context";
 import { useState } from "react";
 import { useUpload } from "@/components/upload/context";
 import { Icon } from "@iconify/react";
 import { author, authors } from "./author";
-import SelectPopover from "@/components/atom/popover";
+import SelectPopover from "@/components/atom/popover/popover";
 
 interface FormData {
   title: string;

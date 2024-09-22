@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useArticle } from './context';
 import Image from 'next/image';
 import Link from 'next/link';
-import Title from '@/components/atom/title';
+import Title from '@/components/atom/title/title';
 
 const RecentArticles: React.FC = () => {
   const { articles, recentArticles } = useArticle();

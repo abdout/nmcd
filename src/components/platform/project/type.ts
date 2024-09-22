@@ -2,7 +2,7 @@ export interface Project {
   _id?: string;
   title: string;
   desc: string;
-  lead: string;
+  club: string;
   status: string;
   readme: string;
   roadmap: string;

@@ -1,7 +1,7 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import { club } from '@/components/platform/club/constant';
-import Title from '@/components/atom/title';
+import Title from '@/components/atom/title/title';
 import React from 'react';
 import { Icon } from "@iconify/react";
 

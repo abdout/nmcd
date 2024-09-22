@@ -4,14 +4,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Editor from '@/components/editor/ui';
+import Editor from '@/components/atom/editor/ui';
 import ImageUpload from '@/components/upload/image';
 import { useMember } from "./context";
 import { useEffect, useState } from "react";
 import { useUpload } from "@/components/upload/context";
 import { Icon } from "@iconify/react";
 import { author, authors } from "@/components/root/article/constant";
-import SelectPopover from "@/components/atom/popover";
+import SelectPopover from "@/components/atom/popover/popover";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { rank, ranks } from "./rank";
@@ -141,7 +141,7 @@ const Create: React.FC = () => {
         if (response.ok) {
             form.reset();
             refreshMembers();
-            router.push('/home');
+            router.push('/platform');
             
         }
     };

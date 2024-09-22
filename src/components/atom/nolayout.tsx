@@ -4,7 +4,7 @@
 import { usePathname } from "next/navigation";
 import Footer from "@/components/root/footer/ui";
 import Header from "@/components/root/header/ui";
-import { ModalProvider } from "@/components/modal/context";
+import { ModalProvider } from "@/components/atom/modal/context";
 import { UploadProvider } from "@/components/upload/context";
 import { ArticleProvider } from "@/components/root/article/context";
 import { ThemeProvider } from "@/components/theme/provider";

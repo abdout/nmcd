@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel"
 import { papers } from "./constant"
 import Image from "next/image"
-import Title from "@/components/atom/title"
+import Title from "@/components/atom/title/title"
 import Recent from "./recent-mobile"
 
 

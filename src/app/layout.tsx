@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
-import { ModalProvider } from "@/components/modal/context";
+import { ModalProvider } from "@/components/atom/modal/context";
 import { UploadProvider } from "@/components/upload/context";
 import { ThemeProvider } from "@/components/theme/provider";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
+import { TaskProvider } from "@/components/platform/task/context";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -26,7 +27,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <ModalProvider>
                 <UploadProvider>
                   <ThemeProvider>
+                    <TaskProvider>
                     {children}
+                    </TaskProvider>
                   </ThemeProvider>
                 </UploadProvider>
               </ModalProvider>

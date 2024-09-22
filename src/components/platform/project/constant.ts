@@ -1,10 +1,10 @@
-export type lead = {
+export type club = {
     value: string
     label: string
     image?: string
   }
   
- export const leads: lead[] = [
+ export const clubs: club[] = [
     {
       value: "الامانة العامة",
       label: "الامانة العامة",
@@ -40,17 +40,48 @@ export type lead = {
   
  export const statuses: status[] = [
     {
-      value: "on progress",
-      label: " جاري",
+      value: "جاري",
+      label: "جاري",
       
     },
     {
-      value: " stuck",
+      value: "متوقف",
       label: "متوقف",
      
     },
     {
-      value: "done",
+      value: "تم",
       label: "تم",
+    },
+    {
+      value: "محايد",
+      label: "محايد",
+    },
+  ]
+
+  export type priority = {
+    value: string
+    label: string
+    image?: string
+  }
+  
+ export const priorities: priority[] = [
+    {
+      value: "عالي",
+      label: "عالي",
+      
+    },
+    {
+      value: "متوسط",
+      label: "متوسط",
+     
+    },
+    {
+      value: "منخفض",
+      label: "منخفض",
+    },
+    {
+      value: "محايد",
+      label: "محايد",
     },
   ]

@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from '../atom/databayt';
+import Title from '../atom/title/databayt';
 import Link from 'next/link';
 import { Icon } from "@iconify/react";
 

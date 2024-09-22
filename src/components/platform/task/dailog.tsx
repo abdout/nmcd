@@ -2,11 +2,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-
+import MemberChart from "./chart";
 import { Icon } from "@iconify/react";
-import Create from "./create";
 
-export function TaskDialog() {
+export function DialogDemo() {
     const [open, setOpen] = useState(false);
 
     const handleClose = () => {
@@ -16,15 +15,16 @@ export function TaskDialog() {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
-                <Button 
-                    size='icon'
-                    className="fixed bottom-8 right-8 rounded-full bg-black reveal-less shadow-lg w-14 h-14 dark:bg-gray-200 dark:text-black"
+                <Button
+                    variant="outline"
+                    className="flex items-center gap-2 font-medium text-lg"
                 >
-                    <Icon icon="ic:sharp-plus" width={40} />   
+                    <Icon icon="ic:sharp-plus" width={20} />
+                    اضافة مقال
                 </Button>
             </DialogTrigger>
             <DialogContent>
-                <Create onClose={handleClose} />
+                <MemberChart onClose={handleClose} />
             </DialogContent>
         </Dialog>
     );

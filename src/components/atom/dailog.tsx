@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Icon } from "@iconify/react";
 
-interface ModalProps {
+interface DialogProps {
     triggerText: string;
     triggerIcon: string;
     children: ReactNode;
 }
 
-export function Modal({ triggerText, triggerIcon, children }: ModalProps) {
+export function ShadcnDailog ({ triggerText, triggerIcon, children }: DialogProps) {
     const [open, setOpen] = useState(false);
 
     const handleClose = () => {
@@ -21,10 +21,10 @@ export function Modal({ triggerText, triggerIcon, children }: ModalProps) {
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
                 <Button
-                    variant="outline"
+                    variant="ghost"
                     className="flex items-center gap-2 font-medium text-lg"
                 >
-                    <Icon icon={triggerIcon} width={20} />
+                    <Icon icon={triggerIcon} width={30} />
                     {triggerText}
                 </Button>
             </DialogTrigger>

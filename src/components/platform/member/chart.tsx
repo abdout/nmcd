@@ -1,17 +1,27 @@
-import { Component } from '@/components/chart/a';
-// import { DountChart } from '@/components/chart/ch';
-import { DountChart } from '@/components/chart/pie';
+
 import React from 'react'
+import { RankChart } from './rank-chart';
+import { ChartTotal } from './chart-total';
+import { ChartRank } from './chart-rank';
+import { ChartField } from './chart-field';
+import { ChartActive } from './chart-active';
+import { ChartInterst } from './chart-interst';
 
 interface ChartProps {
   onClose: () => void;
 }
 const MemberChart: React.FC<ChartProps> = ({ onClose }) => {
   return (
-    <div>
-      <Component />
-      <DountChart />
-      <DountChart />
+    <div className='flex flex-col'>
+      <div className='flex '>
+        <ChartRank />
+        <ChartTotal />
+        <ChartActive />
+      </div>
+      <div className='flex '>
+        <ChartField />
+        <ChartInterst />
+      </div>
     </div>
   )
 }

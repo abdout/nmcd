@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Title from '@/components/atom/title';
+import Title from '@/components/atom/title/title';
 
 interface Video {
   id: string;

@@ -1,4 +1,4 @@
-import Title from '@/components/atom/databayt'
+import Title from '@/components/atom/title/databayt'
 import Block from '@/components/contribute/block'
 import Section from '@/components/contribute/section'
 import Link from 'next/link'

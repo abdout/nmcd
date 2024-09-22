@@ -1,10 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import { DataTable } from '@/components/table/data-table';
+
 import { columns } from '@/components/table/coloum';
 import { useMember } from '@/components/platform/member/context';
-import { Component } from '@/components/chart/a';
-import { DountChart } from '@/components/chart/ch';
+import { Content } from '@/components/platform/member/content';
+
 
 const Member = () => {
 
@@ -12,7 +12,7 @@ const Member = () => {
 
   return (
     <div>
-      <DataTable columns={columns} data={members} />
+      <Content columns={columns} data={members} />
       
     </div>
   );

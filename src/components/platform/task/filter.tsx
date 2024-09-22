@@ -8,22 +8,26 @@ interface FilterOption {
 }
 
 const getUniqueValues = (tasks: task[], property: keyof task) => {
+    if (property === 'task') {
+      return [];
+    }
+  
     const values = tasks.map(task => task[property]);
     return Array.from(new Set(values)).map(value => ({ label: value as string, value: value as string }));
-};
+  };
 
 export const useFilter = (property: keyof task): FilterOption[] => {
-    const { tasks, refreshTasks } = useTask();
-    const [filterOptions, setFilterOptions] = useState<FilterOption[]>([]);
+  const { tasks, refreshTasks } = useTask();
+  const [filterOptions, setFilterOptions] = useState<FilterOption[]>([]);
 
-    useEffect(() => {
-        refreshTasks();
-    }, [refreshTasks]);
+  useEffect(() => {
+    refreshTasks();
+  }, [refreshTasks]);
 
-    useEffect(() => {
-        const uniqueValues = getUniqueValues(tasks, property);
-        setFilterOptions(uniqueValues);
-    }, [tasks, property]);
+  useEffect(() => {
+    const uniqueValues = getUniqueValues(tasks, property);
+    setFilterOptions(uniqueValues);
+  }, [tasks, property]);
 
-    return filterOptions;
+  return filterOptions;
 };

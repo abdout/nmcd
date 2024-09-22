@@ -1,16 +1,18 @@
 import mongoose, { Schema } from "mongoose";
 
+
 const taskSchema = new Schema(
   {
     project: String,
-    title: String,
+    task: String,
     club: String,
-    skill: [String],
-    team: [String], 
-    status: { type: String, enum: ['on progress', 'stuck', 'done'] },
-    priority: { type: String, enum: ['high', 'medium', 'low'] },
-    duration: Number,
-    remark: String,
+    status: String,
+    priority: String,
+    duration: String,
+    desc: String,
+    label: String,
+    tag: String,
+    remark: String, 
   },
   {
     timestamps: true,

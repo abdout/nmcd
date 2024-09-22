@@ -1,4 +1,4 @@
-import Welcome from '@/components/platform/home/welcome'
+import Welcome from '@/components/platform/platform/welcome'
 import React from 'react'
 
 const Home = () => {

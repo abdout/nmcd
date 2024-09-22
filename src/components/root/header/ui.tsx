@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Squash as Hamburger } from 'hamburger-react';
-import HamburgerMenu from "@/components/hamburger/hamburger";
+import HamburgerMenu from "@/components/atom/hamburger/hamburger";
 import { usePathname } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { header } from "./constant";

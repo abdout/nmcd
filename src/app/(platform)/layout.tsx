@@ -5,7 +5,7 @@ import Header from "@/components/platform/header/ui";
 import { MemberProvider } from "@/components/platform/member/context";
 import { UploadProvider } from "@/components/upload/context";
 import { ProjectProvider } from "@/components/platform/project/context";
-import { TaskProvider } from "@/components/platform/task/context";
+// import { TaskProvider } from "@/components/platform/task/context";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -18,10 +18,10 @@ export default function PlatformLayout({ children }: { children: React.ReactNode
             <ProjectProvider>
               <UploadProvider>
                 <MemberProvider>
-                  <TaskProvider>
+                  {/* <TaskProvider> */}
                     <Header />
                     {children}
-                  </TaskProvider>
+                  {/* </TaskProvider> */}
                 </MemberProvider>
               </UploadProvider>
             </ProjectProvider>

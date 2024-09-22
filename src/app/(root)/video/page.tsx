@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from'react';
 import VideoCard from '@/components/root/video/card';
-import Title from '@/components/atom/title';
+import Title from '@/components/atom/title/title';
 import Image from 'next/image';
 import Link from 'next/link';
 

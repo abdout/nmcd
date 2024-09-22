@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Title from '@/components/atom/title'
+import Title from '@/components/atom/title/title'
 import Excute from './excute'
 import Office from './office'
 import NewsLetter from './newsletter'
