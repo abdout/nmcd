@@ -32,18 +32,68 @@ export const header = [
     href: "/task",
     key: "task",
     label: "مهمة",
-    icon: "fluent:task-list-square-ltr-20-regular",
+    icon: "codicon:issues",
+  },
+  // {
+  //   href: "/report",
+  //   key: "report",
+  //   label: "تقرير",
+  //   icon: "material-symbols-light:article-outline",
+  // },
+  // {
+  //   href: "/wallet",
+  //   key: "wallet",
+  //   label: "مال",
+  //   icon: "circum:wallet",
+  // },
+];
+
+
+export const hamburger = [
+  {
+    title: "الدخول",
+    path: "/login",
+    icon: "ph:sign-in",
+  },
+
+  {
+    title: "التسجيل",
+    path: "/join",
+    icon: "iconamoon:profile-light",
   },
   {
-    href: "/report",
-    key: "report",
-    label: "تقرير",
+    title: "الأوراق",
+    path: "/paper",
+    icon: "system-uicons:paper",
+  },
+
+  {
+    title: "التقرير",
+    path: "/report",
     icon: "material-symbols-light:article-outline",
+    submenu: true,
+    submenuItems: [
+      {
+        title: "Roadmap",
+        path: "/",
+      },
+
+      {
+        title: "Block",
+        path: "/",
+      },
+    ],
   },
+
   {
-    href: "/wallet",
-    key: "wallet",
-    label: "مال",
+    title: "المال",
+    path: "/wallet",
     icon: "circum:wallet",
   },
+  {
+    title: "المطورين",
+    path: "/contribute",
+    icon: "bi:code",
+  },
 ];
+

@@ -1,4 +1,3 @@
-// Header.tsx
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -6,7 +5,7 @@ import { Squash as Hamburger } from 'hamburger-react';
 import HamburgerMenu from "@/components/atom/hamburger/hamburger";
 import { usePathname } from "next/navigation";
 import { Icon } from "@iconify/react";
-import { header } from "./constant";
+import { hamburger, header } from "./constant";
 import Toggle from "@/components/theme/toggle";
 import Link from "next/link";
 import { UserButton } from "@/components/auth/user-button";
@@ -38,26 +37,24 @@ const Header = () => {
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1 }}
     >
-      <ul className="hidden md:flex space-x-8">
+      <ul className="hidden md:flex space-x-7">
         {header.map((link) => (
           <li
             key={link.key}
             className={
-              link.href === pathname
-                ? "hover:opacity-100"
-                : "opacity-50 hover:opacity-100"
+              link.href === '/' ? (pathname === '/' ? 'hover:opacity-100' : 'opacity-50 hover:opacity-100') : (pathname.startsWith(link.href) ? 'hover:opacity-100' : 'opacity-50 hover:opacity-100')
             }
           >
             <TooltipProvider>
               <Tooltip>
-                <Link href={link.href} className="text-lg group relative flex justify-center">
-                  <TooltipTrigger asChild>
-                    <Icon icon={link.icon} width={35} className="flex-shrink-0" />
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    {link.label}
-                  </TooltipContent>
-                </Link>
+                <TooltipTrigger asChild>
+                  <Link href={link.href} className="text-sm group relative flex justify-center">
+                    <Icon icon={link.icon} width={33} className="flex-shrink-0" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  {link.label}
+                </TooltipContent>
               </Tooltip>
             </TooltipProvider>
           </li>
@@ -65,31 +62,42 @@ const Header = () => {
         <li className="opacity-50 hover:opacity-100">
           <TooltipProvider>
             <Tooltip>
-              <div className="text-lg group relative flex justify-center pt-1">
-                <TooltipTrigger asChild>
+              <TooltipTrigger asChild>
+                <div className="text-lg relative flex justify-center pt-1">
                   <Toggle />
-                </TooltipTrigger>
-                <TooltipContent>
-                  ثيم
-                </TooltipContent>
-              </div>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                ثيم
+              </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </li>
-        <li className="opacity-50 hover:opacity-100 pt-[4px]">
-          <UserButton />
+        <li className="opacity-50 hover:opacity-100 pt-[4.5px]">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div>
+                  <UserButton />
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                المستخدم
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </li>
         <li className="opacity-50 hover:opacity-100 z-50">
           <TooltipProvider>
             <Tooltip>
-              <div className="text-lg group relative flex justify-center -ml-2 -mt-[7px]">
-                <TooltipTrigger asChild>
-                  <Hamburger size={22} distance="lg" toggled={open} toggle={setOpen} />
-                </TooltipTrigger>
-                <TooltipContent>
-                  قائمة
-                </TooltipContent>
-              </div>
+              <TooltipTrigger asChild>
+                <div className="text-lg relative flex justify-center -ml-2 -mt-[6.5px]">
+                  <Hamburger size={20} distance="lg" toggled={open} toggle={setOpen} />
+                </div>
+              </TooltipTrigger>
+              <TooltipContent className="-mt-2">
+                قائمة
+              </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </li>
@@ -99,34 +107,41 @@ const Header = () => {
           <li
             key={link.key}
             className={
-              link.href === pathname
-                ? "hover:opacity-100"
-                : "opacity-50 hover:opacity-100"
+              link.href === '/' ? (pathname === '/' ? 'hover:opacity-100' : 'opacity-50 hover:opacity-100') : (pathname.startsWith(link.href) ? 'hover:opacity-100' : 'opacity-50 hover:opacity-100')
             }
           >
             <TooltipProvider>
               <Tooltip>
-                <Link href={link.href} className="text-lg group relative flex justify-center">
-                  <TooltipTrigger asChild>
-                    <Icon icon={link.icon} width={35} className="flex-shrink-0" />
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    {link.label}
-                  </TooltipContent>
-                </Link>
+                <TooltipTrigger asChild>
+                  <Link href={link.href} className="text-sm group relative flex justify-center">
+                    <Icon icon={link.icon} width={30} className="flex-shrink-0" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  {link.label}
+                </TooltipContent>
               </Tooltip>
             </TooltipProvider>
           </li>
         ))}
         <li className="opacity-50 hover:opacity-100 z-50">
-          <div className="text-lg group relative flex justify-center -ml-2 -mt-[7px]">
-            <div className="cursor-pointer" onClick={() => setOpen(!open)}>
-              <Hamburger size={22} toggled={open} toggle={setOpen} />
-            </div>
-          </div>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="text-lg relative flex justify-center -ml-2 -mt-[7px]">
+                  <div className="cursor-pointer" onClick={() => setOpen(!open)}>
+                    <Hamburger size={20} toggled={open} toggle={setOpen} />
+                  </div>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                قائمة
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </li>
       </ul>
-      <HamburgerMenu open={open} setOpen={setOpen} />
+      <HamburgerMenu open={open} setOpen={setOpen} routes={hamburger}/>
     </motion.div>
   );
 };

@@ -19,7 +19,7 @@ const Toggle = () => {
   return (
     <div>
       <DarkSide
-        className='text-[27px] '
+        className='text-[25.5px] '
         type="button"
         id="dark-side-toggle"
         duration={750}
