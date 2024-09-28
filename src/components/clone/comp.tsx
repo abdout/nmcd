@@ -7,9 +7,10 @@ export const Divider = () => (
 );
 
 // components/Header.tsx
+// components/Header.tsx
 export const Header = () => (
   <div className="w-[598px] h-[53px] relative">
-    <div className="absolute left-[15px] top-[15px] text-[#0f1419] text-[19px] font-bold font-['SF Compact Display']">
+    <div className="absolute left-[15px] top-[15px] text-[#0f1419] text-[19px] font-bold font-[&#39;SF Compact Display&#39;]">
       Home
     </div>
     <div className="absolute w-full bottom-0">
@@ -17,6 +18,7 @@ export const Header = () => (
     </div>
   </div>
 );
+
 
 // components/Avatar.tsx
 interface AvatarProps {
