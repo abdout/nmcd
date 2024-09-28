@@ -12,7 +12,6 @@ import { fetchYouTubeVideos } from "@/lib/youtube";
 import RecentVideos from "@/components/root/video/recent";
 import RecentGallery from "@/components/root/gallery/recent";
 
-
 export default function Home() {
   const [videos, setVideos] = useState<any[]>([]);
 

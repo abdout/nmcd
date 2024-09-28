@@ -1,12 +1,35 @@
-import Welcome from '@/components/platform/platform/welcome'
-import React from 'react'
+'use client';
+import React, { useState, useEffect } from 'react';
+import Welcome from '@/components/platform/platform/welcome';
+import Dashboard from '@/components/platform/platform/dashboard';
+import TwitterPost from '@/components/platform/platform/post';
+import X from '@/app/(contribute)/x/page';
 
 const Home = () => {
-  return (
-    <div>
-      <Welcome />
-    </div>
-  )
-}
+  const [showWelcome, setShowWelcome] = useState(true);
 
-export default Home
+  useEffect(() => {
+    // Check if the user has seen the welcome screen before
+    const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
+    if (hasSeenWelcome) {
+      setShowWelcome(false);
+    }
+  }, []);
+
+  const dismissWelcome = () => {
+    setShowWelcome(false);
+    localStorage.setItem('hasSeenWelcome', 'true');
+  };
+
+  return (
+    <div className="container mx-auto px-4">
+      {showWelcome ? (
+        <Welcome onDismiss={dismissWelcome} />
+      ) : (
+        <X />
+      )}
+    </div>
+  );
+};
+
+export default Home;
