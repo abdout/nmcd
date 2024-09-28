@@ -71,7 +71,7 @@ export const Tweet = ({ avatarSrc, name, username, time, content, imageUrl }: Tw
     <div className="flex-grow">
       <div className="flex gap-2 items-center">
         <span className="font-bold text-[#0f1419]">{name}</span>
-        <span className="text-[#5b7083]">{username}</span>
+        <span className="text-[#5b7083]">@{username}</span>
         <span className="text-[#5b7083]">· {time}</span>
       </div>
       <div className="text-[#0f1419] mt-1 w-[400px]">{content}</div>

@@ -12,7 +12,7 @@ import Sidebar from './sidebar';
 
 const Profile = () => {
     return (
-        <div className="w-[550px] h-full border-x-[0.09px] mx-6 ">
+        <div className="w-[550px] h-full border-x-[0.09px] mx-8 ">
             <ProfileHeader />
             <ProfileAvater />
             <ProfileBrief />
