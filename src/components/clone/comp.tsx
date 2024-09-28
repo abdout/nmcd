@@ -41,7 +41,7 @@ export const TweetInput = ({ avatarSrc }: TweetInputProps) => (
   <div className="flex gap-4 px-[15px] py-2.5">
     <Avatar src={avatarSrc} />
     <div className="flex-grow">
-      <div className="text-[#5b7083] text-xl font-medium">What's happening?</div>
+      <div className="text-[#5b7083] text-xl font-medium">What is happening?</div>
       <div className="flex gap-2 mt-4">
         {/* Icon buttons can be added here */}
         <div className="w-6 h-6">Icon1</div>
@@ -71,7 +71,7 @@ export const Tweet = ({ avatarSrc, name, username, time, content, imageUrl }: Tw
     <div className="flex-grow">
       <div className="flex gap-2 items-center">
         <span className="font-bold text-[#0f1419]">{name}</span>
-        <span className="text-[#5b7083]">@{username}</span>
+        <span className="text-[#5b7083]">{username}</span>
         <span className="text-[#5b7083]">· {time}</span>
       </div>
       <div className="text-[#0f1419] mt-1 w-[400px]">{content}</div>
