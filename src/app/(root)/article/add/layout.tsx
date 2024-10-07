@@ -6,10 +6,9 @@ import { UploadProvider } from "@/components/upload/context";
 import { ArticleProvider } from "@/components/root/article/context";
 import { ThemeProvider } from "@/components/theme/provider";
 import { SessionProvider } from "next-auth/react";
-
+import { auth } from "@/auth";
 import Footer from "@/components/root/footer/ui";
 import Header from "@/components/root/header/ui";
-import { auth } from "../../../../../auth";
 
 const rubik = Rubik({ subsets: ["latin"] });
 

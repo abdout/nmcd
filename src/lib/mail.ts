@@ -14,7 +14,7 @@ export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
 
   try {
     const response = await resend.emails.send({
-      from: 'no-reply@databayt.org',
+      from: "onboarding@resend.dev",
       to: email,
       subject: "2FA Code",
       html: `<p>Your 2FA code: ${token}</p>`,
@@ -36,9 +36,9 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
 
   try {
     const response = await resend.emails.send({
-      from: 'no-reply@databayt.org',
+      from: "onboarding@resend.dev",
       to: email,
-      subject: 'Reset your password',
+      subject: "Reset your password",
       html: `<p>Click <a href="${resetLink}">here</a> to reset password.</p>`,
     });
 
@@ -58,20 +58,16 @@ export const sendVerificationEmail = async (email: string, token: string) => {
 
   try {
     const response = await resend.emails.send({
-      from: 'support@databayt.org',
+      from: "onboarding@resend.dev",
       to: email,
       subject: "Confirm your email",
       html: `<p>Click <a href="${confirmLink}">here</a> to confirm email.</p>`,
-      text: `Click the following link to confirm your email: ${confirmLink}`
     });
 
     // Debugging: Log the response from Resend API
     console.log("Verification email sent successfully, response:", response);
   } catch (error) {
+    // Debugging: Log the error if sending email fails
     console.error("Error sending verification email:", error);
-    if (error instanceof Error) {
-      console.error("Error message:", error.message);
-      console.error("Error stack:", error.stack);
-    }
   }
 };

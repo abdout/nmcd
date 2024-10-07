@@ -3,9 +3,8 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "../globals.css";
 import { SessionProvider } from "next-auth/react";
-
+import { auth } from "@/auth";
 import NoLayout from "@/components/atom/nolayout";
-import { auth } from "../../../auth";
 
 const rubik = Rubik({ subsets: ["latin"] });
 

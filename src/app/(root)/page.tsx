@@ -7,7 +7,7 @@ import Hero from "@/components/root/hero/ui";
 import Paper from "@/components/root/paper/ui";
 import "@theme-toggles/react/css/DarkSide.css";
 import { useEffect, useState } from "react";
-import Lenis from '@studio-freight/lenis';
+import Lenis from '@studio-freight/lenis'
 import { fetchYouTubeVideos } from "@/lib/youtube";
 import RecentVideos from "@/components/root/video/recent";
 import RecentGallery from "@/components/root/gallery/recent";

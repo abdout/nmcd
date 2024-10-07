@@ -5,11 +5,26 @@
  */
 export const publicRoutes = [
   "/",
-  "/new-verification",
-  "/admin",
-  "/client",
-  "/server",
-  "/setting",
+  "/verification",
+  "/readme",
+  "/article",
+  "/video",
+  "/community",
+  "/awrag",
+  "/atom/playground",
+  "/api/article",
+  "/api/youtube",
+  "/auth/puplic",
+];
+
+/**
+ * An array of regular expressions for public routes with dynamic segments
+ * @type {RegExp[]}
+ */
+export const publicRoutesRegex = [
+  /^\/article\/[^/]+$/,
+  /^\/video\/[^/]+$/,
+  /^\/api\/youtube\/[^/]+$/,
 ];
 
 /**
@@ -19,10 +34,10 @@ export const publicRoutes = [
  */
 export const authRoutes = [
   "/login",
-  "/register",
+  "/join",
   "/error",
   "/reset",
-  "/new-password"
+  "/password"
 ];
 
 /**
@@ -36,4 +51,4 @@ export const apiAuthPrefix = "/api/auth";
  * The default redirect path after logging in
  * @type {string}
  */
-export const DEFAULT_LOGIN_REDIRECT = "/setting";
+export const DEFAULT_LOGIN_REDIRECT = "/platform";

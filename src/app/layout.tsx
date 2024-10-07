@@ -5,9 +5,8 @@ import { ModalProvider } from "@/components/atom/modal/context";
 import { UploadProvider } from "@/components/upload/context";
 import { ThemeProvider } from "@/components/theme/provider";
 import { SessionProvider } from "next-auth/react";
-
+import { auth } from "@/auth";
 import { TaskProvider } from "@/components/platform/task/context";
-import { auth } from "../../auth";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
