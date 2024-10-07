@@ -1,6 +1,7 @@
 "use client";
-import Link from 'next/link';
-import { Icon } from "@iconify/react";
+
+import { FaUser } from "react-icons/fa";
+import { ExitIcon } from "@radix-ui/react-icons"
 
 import {
   DropdownMenu,
@@ -13,52 +14,31 @@ import {
   AvatarImage,
   AvatarFallback,
 } from "@/components/ui/avatar";
-import { useCurrentUser } from "@/components/auth/hooks/use-current-user";
+
 import { LogoutButton } from "@/components/auth/logout-button";
+import { useCurrentUser } from "./hooks/use-current-user";
 
 export const UserButton = () => {
   const user = useCurrentUser();
 
   return (
-    <div>
-      <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Avatar>
-            <AvatarImage src={user?.image || ""} />
-            <AvatarFallback className="bg-black dark:bg-white">
-            <Icon icon={"iconamoon:profile-fill"} height="15" className="text-white dark:text-black" />
-            </AvatarFallback>
-          </Avatar>
-        </DropdownMenuTrigger>
-        <div>
-          <DropdownMenuContent className="w-44 mt-2 z-50" align="end">
-            <Link href="/profile">
-              <DropdownMenuItem className="flex justify-end items-center">
-                <span className="ml-2">الملف</span>
-                <Icon icon={"iconamoon:profile-thin"} height="25" />
-              </DropdownMenuItem>
-            </Link>
-            <Link href="/setting">
-              <DropdownMenuItem className="flex justify-end items-center">
-                <span className="ml-2">الضبط</span>
-                <Icon icon={"circum:settings"} height="25" />
-              </DropdownMenuItem>
-            </Link>
-            <Link href="/community">
-              <DropdownMenuItem className="flex justify-end items-center">
-                <span className="ml-2">المجتمع</span>
-                <Icon icon={"ph:circle-thin"} height="25" />
-              </DropdownMenuItem>
-            </Link>
-            <LogoutButton>
-              <DropdownMenuItem className="flex justify-end items-center">
-                <span className="ml-2">الخروج</span>
-                <Icon icon={"material-symbols-light:logout-rounded"} height="25" />
-              </DropdownMenuItem>
-            </LogoutButton>
-          </DropdownMenuContent>
-        </div>
-      </DropdownMenu>
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <Avatar>
+          <AvatarImage src={user?.image || ""} />
+          <AvatarFallback className="bg-black">
+            <FaUser className="text-[#fcfcfc]" />
+          </AvatarFallback>
+        </Avatar>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-40" align="end">
+        <LogoutButton>
+          <DropdownMenuItem>
+            <ExitIcon className="h-4 w-4 mr-2" />
+            Logout
+          </DropdownMenuItem>
+        </LogoutButton>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };
