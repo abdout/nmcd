@@ -22,7 +22,7 @@ const MobileHero = () => {
                         وكريم شيم السودانيين، وتقوم على إرث المسلمين في السودان خاصة، وإرث شعب السودان
                         عامة، وتجربة الأمة المسلمة والأحرار في العالم،
                     </p>
-                    <Link href="/register">
+                    <Link href="/join">
                         <Button size='lg' className="bg-yellow-400 text-black w-32 h-12 md:w-44 md:h-12 text-[16px] md:text-lg hover:bg-[#ffd000]">يدك معانا</Button>
                     </Link>
                 </div>
