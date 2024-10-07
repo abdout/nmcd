@@ -2,7 +2,7 @@ import React from 'react'
 
 const ForYou = () => {
   return (
-    <div>On progress</div>
+    <div className='flex items-center justify-center'>On progress</div>
   )
 }
 
