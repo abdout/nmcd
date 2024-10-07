@@ -90,7 +90,7 @@ export const RegisterForm = () => {
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="Email"
+                      placeholder="البريد الالكتروني"
                       type="email"
                     />
                   </FormControl>
@@ -108,7 +108,7 @@ export const RegisterForm = () => {
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="Password"
+                      placeholder="كلمة المرور"
                       type="password"
                     />
                   </FormControl>
@@ -124,7 +124,7 @@ export const RegisterForm = () => {
             type="submit"
             className="w-full h-12 text-[16px] text-[#fcfcfc]"
           >
-            Join
+            تسجيل
           </Button>
         </form>
       </Form>

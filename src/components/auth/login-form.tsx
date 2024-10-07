@@ -114,7 +114,7 @@ export const LoginForm = () => {
                         <Input
                           {...field}
                           disabled={isPending}
-                          placeholder="Email"
+                          placeholder="البريد الالكتروني"
                           type="email"
                         />
                       </FormControl>
@@ -132,7 +132,7 @@ export const LoginForm = () => {
                         <Input
                           {...field}
                           disabled={isPending}
-                          placeholder="Password"
+                          placeholder="كلمة المرور"
                           type="password"
                         />
                       </FormControl>
@@ -143,7 +143,7 @@ export const LoginForm = () => {
                         className="px-0 font-normal"
                       >
                         <Link href="/reset" className="tracking-wide">
-                          Forgot password?
+                          نسيت كلمة المرور؟
                         </Link>
                       </Button>
                       <FormMessage />
@@ -160,7 +160,7 @@ export const LoginForm = () => {
             type="submit"
             className="w-full h-12 text-[16px] text-[#fcfcfc]"
           >
-            {showTwoFactor ? "Confirm" : "Login"}
+            {showTwoFactor ? "تأكيد" : "الدخول"}
           </Button>
         </form>
       </Form>
