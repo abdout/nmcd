@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from 'next/link';
 import { useArticle } from "./context";
-import { domain } from "@/lib/domain";
-import { DialogDemo } from "./dailog";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { MoreHorizontal } from "lucide-react";
