@@ -1,9 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Welcome from '@/components/platform/platform/welcome';
-import Dashboard from '@/components/platform/platform/dashboard';
-import TwitterPost from '@/components/platform/platform/post';
-import X from '@/app/(contribute)/x/page';
+import ForYou from '@/components/platform/platform/for-you';
+
 
 const Home = () => {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -26,7 +25,7 @@ const Home = () => {
       {showWelcome ? (
         <Welcome onDismiss={dismissWelcome} />
       ) : (
-        <X />
+        <ForYou />
       )}
     </div>
   );
