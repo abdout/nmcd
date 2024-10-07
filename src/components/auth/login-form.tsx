@@ -73,7 +73,7 @@ export const LoginForm = () => {
   return (
     <CardWrapper
       headerLabel=""
-      backButtonLabel="Don't have an account?"
+      backButtonLabel="لا تمتلك حساب؟"
       backButtonHref="/join"
       // showSocial
     >
