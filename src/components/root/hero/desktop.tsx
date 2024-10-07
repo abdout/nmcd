@@ -63,7 +63,7 @@ const DesktopHero = () => {
             وكريم شيم السودانيين، وتقوم على إرث المسلمين في السودان خاصة، وإرث شعب السودان<br />
             عامة، وتجربة الأمة المسلمة والأحرار في العالم،
           </p>
-          <Link href="/join">
+          <Link href="/register">
             <Button size='lg' className="bg-yellow-400 text-black md:w-44 md:h-12 text-lg hover:bg-[#ffd000]">يدك معانا</Button>
           </Link>
         </motion.div>
