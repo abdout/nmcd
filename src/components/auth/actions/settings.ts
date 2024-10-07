@@ -10,7 +10,7 @@ import { sendVerificationEmail } from "@/lib/mail";
 import { SettingsSchema } from "../schemas";
 import { getUserByEmail, getUserById } from "../data/user";
 import { db } from "@/lib/db";
-import { update } from "../../../../auth";
+import { update } from "@/auth";
 
 export const settings = async (
   values: z.infer<typeof SettingsSchema>
