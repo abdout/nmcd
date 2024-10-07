@@ -53,7 +53,7 @@ export const RegisterForm = () => {
   return (
     <CardWrapper
       headerLabel=""
-      backButtonLabel="Already have an account?"
+      backButtonLabel="لديك حساب بالفعل؟"
       backButtonHref="/login"
       // showSocial
     >
@@ -73,7 +73,7 @@ export const RegisterForm = () => {
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="Name"
+                      placeholder="الاسم"
                     />
                   </FormControl>
                   <FormMessage />
@@ -124,7 +124,7 @@ export const RegisterForm = () => {
             type="submit"
             className="w-full h-12 text-[16px] text-[#fcfcfc]"
           >
-            تسجيل
+            التسجيل
           </Button>
         </form>
       </Form>
