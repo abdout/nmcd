@@ -7,13 +7,13 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/auth/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 import {
   Avatar,
   AvatarImage,
   AvatarFallback,
-} from "@/components/auth/ui/avatar";
-import { useCurrentUser } from "@/hook/use-current-user";
+} from "@/components/ui/avatar";
+import { useCurrentUser } from "@/components/auth/hooks/use-current-user";
 import { LogoutButton } from "@/components/auth/logout-button";
 
 export const UserButton = () => {

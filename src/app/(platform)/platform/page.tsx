@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Welcome from '@/components/platform/platform/welcome';
 import Dashboard from '@/components/platform/platform/dashboard';
 import TwitterPost from '@/components/platform/platform/post';
-import X from '@/app/(contribute)/x/page';
+import Feed from '@/components/atom/feed';
+
 
 const Home = () => {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -26,7 +27,7 @@ const Home = () => {
       {showWelcome ? (
         <Welcome onDismiss={dismissWelcome} />
       ) : (
-        <X />
+        <Feed />
       )}
     </div>
   );
